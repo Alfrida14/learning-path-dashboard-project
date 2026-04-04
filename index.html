@@ -56,7 +56,7 @@
 </nav>
 
             <header class="hero">
-                <h1>Welcome back, Arjun 👋</h1>
+                <h1>Welcome back 👋</h1>
                 <p class="subtitle">You're on a 5-day streak. Keep it up — 2 modules to hit your weekly goal.</p>
             </header>
 
@@ -226,6 +226,25 @@
             stat.style.borderColor = '#24242e';
         });
     });
+</script>
+<script>
+    lucide.createIcons();
+
+    // UPDATE PROFILE ICON AND NAME
+    const savedName = localStorage.getItem('userDisplayName') || "Guest User";
+    
+    // 1. Update the Text Name
+    const nameElement = document.querySelector('.user-name');
+    if(nameElement) nameElement.innerText = savedName;
+
+    // 2. Update the Avatar Initials (e.g., "Arjun Mehra" -> "AM")
+    const avatarElement = document.querySelector('.avatar');
+    if(avatarElement) {
+        const initials = savedName.split(' ').map(n => n[0]).join('').toUpperCase();
+        avatarElement.innerText = initials.substring(0, 2); 
+    }
+
+    // Your existing Search Logic...
 </script>
 </body>
 </html>
