@@ -7,5 +7,5 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     localStorage.setItem('userDisplayName', name);
     
     // Redirect to the main dashboard
-    window.location.href = 'index.html';
+    window.location.href = 'dashboard.html';
 });
