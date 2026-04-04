@@ -1,0 +1,71 @@
+:root {
+    --bg-black: #0d0d12;
+    --sidebar-bg: #111118;
+    --card-bg: #16161e;
+    --border: #24242e;
+    --text-dim: #6c6c7e;
+    --accent-purple: #8b5cf6;
+    --accent-green: #10b981;
+    --accent-yellow: #f59e0b;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-black);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.app-wrapper { display: flex; }
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: bold; margin-bottom: 2.5rem; }
+.logo-dot { width: 12px; height: 12px; background: var(--accent-purple); border-radius: 50%; }
+
+.section-label { color: var(--text-dim); font-size: 0.65rem; font-weight: 800; letter-spacing: 1px; margin: 1.5rem 0 0.8rem; }
+.nav-item { display: flex; align-items: center; gap: 12px; color: var(--text-dim); text-decoration: none; padding: 10px; border-radius: 8px; font-size: 0.9rem; margin-bottom: 4px; }
+.nav-item.active { background: #1c1c2b; color: var(--accent-purple); }
+.badge { margin-left: auto; background: var(--accent-purple); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; }
+
+/* Main Content */
+.main-content { flex: 1; padding: 0; }
+.top-nav { height: 60px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; background: var(--sidebar-bg); }
+.nav-links a { color: var(--text-dim); text-decoration: none; margin-right: 2rem; font-size: 0.9rem; padding-bottom: 18px; }
+.nav-links a.active { color: white; border-bottom: 2px solid var(--accent-purple); }
+.user-profile { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 35px; height: 35px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; }
+
+/* Content Padding & Hero */
+.hero { padding: 3rem 2rem 2rem; }
+.hero h1 { font-size: 2.5rem; margin: 0; }
+.subtitle { color: var(--text-dim); margin-top: 10px; }
+
+/* Cards & Grid */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 0 2rem; }
+.stat-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); }
+.card-label { color: var(--text-dim); font-size: 0.65rem; font-weight: bold; }
+.stat-value { font-size: 2rem; margin: 10px 0; }
+.text-green { color: var(--accent-green); }
+.text-yellow { color: var(--accent-yellow); }
+.text-purple { color: var(--accent-purple); }
+
+.dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; padding: 2rem; }
+.activity-card, .rec-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1rem; }
+.week-days { display: flex; gap: 8px; margin-top: 1rem; }
+.day { width: 30px; height: 30px; background: #24242e; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-dim); }
+.day.active { background: var(--accent-green); color: black; font-weight: bold; }
+
+.progress-bg { background: #24242e; height: 6px; border-radius: 10px; margin-top: 8px; overflow: hidden; }
+.progress-bar { height: 100%; border-radius: 10px; }
+.progress-bar.purple { background: var(--accent-purple); }
+.progress-bar.green { background: var(--accent-green); }

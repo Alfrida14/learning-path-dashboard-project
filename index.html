@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnPath | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-dot"></div>
+                <span>LearnPath</span>
+            </div>
+            
+            <div class="nav-section">
+                <p class="section-label">LEARNING</p>
+                <a href="#" class="nav-item active"><i data-lucide="layout-grid"></i> Overview</a>
+                <a href="#" class="nav-item"><i data-lucide="layers"></i> My paths <span class="badge">3</span></a>
+                <a href="#" class="nav-item"><i data-lucide="file-text"></i> Resources</a>
+            </div>
+
+            <div class="nav-section">
+                <p class="section-label">INSTRUCTOR</p>
+                <a href="#" class="nav-item"><i data-lucide="clock"></i> Path builder</a>
+                <a href="#" class="nav-item"><i data-lucide="bar-chart-2"></i> Analytics</a>
+            </div>
+
+            <div class="sidebar-bottom">
+                <p class="section-label">SETTINGS</p>
+                <a href="#" class="nav-item"><i data-lucide="settings"></i> Settings</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <nav class="top-nav">
+                <div class="nav-links">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">My paths</a>
+                    <a href="#">Path builder</a>
+                    <a href="#">Analytics</a>
+                    <a href="#">Resources</a>
+                </div>
+                <div class="user-profile">
+                    <span class="user-name">Arjun Mehra</span>
+                    <div class="avatar">AM</div>
+                </div>
+            </nav>
+
+            <header class="hero">
+                <h1>Good morning, Arjun 👋</h1>
+                <p class="subtitle">You're on a 5-day streak. Keep it up — 2 modules to hit your weekly goal.</p>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="card-label">PATHS ENROLLED</span>
+                    <h2 class="stat-value">3</h2>
+                    <p class="card-sub">1 active this week</p>
+                </div>
+                <div class="stat-card">
+                    <span class="card-label">MODULES DONE</span>
+                    <h2 class="stat-value text-green">14</h2>
+                    <p class="card-sub text-green">↑ 3 this week</p>
+                </div>
+                <div class="stat-card">
+                    <span class="card-label">HOURS LEARNED</span>
+                    <h2 class="stat-value text-yellow">22.4</h2>
+                    <p class="card-sub text-green">↑ 4.1 from last week</p>
+                </div>
+                <div class="stat-card">
+                    <span class="card-label">DAY STREAK</span>
+                    <h2 class="stat-value text-purple">5</h2>
+                    <p class="card-sub">Personal best: 12</p>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="left-col">
+                    <div class="activity-card">
+                        <div class="card-header">
+                            <h3>This week</h3>
+                            <span class="streak-pill">5-day streak 🔥</span>
+                        </div>
+                        <div class="week-days">
+                            <span class="day">M</span><span class="day">T</span><span class="day">W</span><span class="day">T</span><span class="day active">F</span><span class="day">S</span><span class="day">S</span>
+                        </div>
+                    </div>
+
+                    <div class="paths-section">
+                        <h3>Active paths</h3>
+                        <div class="path-item">
+                            <div class="path-info">
+                                <span>Full-stack engineering</span>
+                                <span class="path-percent">44%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-bar purple" style="width: 44%"></div></div>
+                        </div>
+                        <div class="path-item">
+                            <div class="path-info">
+                                <span>ML fundamentals</span>
+                                <span class="path-percent">72%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-bar green" style="width: 72%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="right-col">
+                    <h3>AI recommendations</h3>
+                    <div class="rec-card">
+                        <span class="tag">NEXT UP · BASED ON YOUR PACE</span>
+                        <h4>REST API design patterns</h4>
+                        <p>Follows naturally from your Express.js module</p>
+                    </div>
+                    <div class="rec-card">
+                        <span class="tag purple-tag">STRENGTHEN WEAK AREA</span>
+                        <h4>Backpropagation deep dive</h4>
+                        <p>You spent 2x average time on gradient descent</p>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
