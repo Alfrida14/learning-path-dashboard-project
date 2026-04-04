@@ -36,27 +36,27 @@
 
         <main class="main-content">
             <nav class="top-nav">
-    <div class="nav-links">
-        <a href="#" class="active">Dashboard</a>
-        <a href="#">My paths</a>
-        <a href="#">Path builder</a>
-        <a href="#">Analytics</a>
-        <a href="#">Resources</a>
-    </div>
+                <div class="nav-links">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">My paths</a>
+                    <a href="#">Path builder</a>
+                    <a href="#">Analytics</a>
+                    <a href="#">Resources</a>
+                </div>
 
-    <div class="header-search">
-        <i data-lucide="search" class="search-icon"></i>
-        <input type="text" id="pathSearch" placeholder="Search your learning paths...">
-    </div>
+                <div class="header-search">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" id="pathSearch" placeholder="Search your learning paths...">
+                </div>
 
-    <div class="user-profile">
-        <span class="user-name">Arjun Mehra</span>
-        <div class="avatar">AM</div>
-    </div>
-</nav>
+                <div class="user-profile">
+                    <span class="user-name">Guest User</span>
+                    <div class="avatar">GU</div>
+                </div>
+            </nav>
 
             <header class="hero">
-                <h1>Welcome back 👋</h1>
+                <h1>Welcome back, <span id="welcome-name">Student</span> 👋</h1>
                 <p class="subtitle">You're on a 5-day streak. Keep it up — 2 modules to hit your weekly goal.</p>
             </header>
 
@@ -85,67 +85,7 @@
 
             <div class="dashboard-grid">
                 <div class="left-col">
-    <div class="paths-section">
-        <h3 class="section-title">Active paths</h3>
-        
-        <div class="path-card">
-            <div class="path-header">
-                <div class="path-name">
-                    <h4>Full-stack engineering</h4>
-                    <p>Module 4 of 9 · Node.js APIs</p>
-                </div>
-                <span class="path-percentage text-purple">44%</span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill bg-purple" style="width: 44%"></div>
-            </div>
-        </div>
-
-        <div class="path-card">
-            <div class="path-header">
-                <div class="path-name">
-                    <h4>ML fundamentals</h4>
-                    <p>Module 6 of 8 · Deep learning</p>
-                </div>
-                <span class="path-percentage text-green">72%</span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill bg-green" style="width: 72%"></div>
-            </div>
-        </div>
-
-        <div class="path-card">
-            <div class="path-header">
-                <div class="path-name">
-                    <h4>System design</h4>
-                    <p>Module 1 of 6 · Basics</p>
-                </div>
-                <span class="path-percentage text-yellow">18%</span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill bg-yellow" style="width: 18%"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<aside class="right-col">
-    <h3 class="section-title">AI recommendations</h3>
-    
-    <div class="rec-card">
-        <span class="rec-tag text-purple-dim">NEXT UP · BASED ON YOUR PACE</span>
-        <h4 class="rec-title">REST API design patterns</h4>
-        <p class="rec-desc">Follows naturally from your Express.js module · est. 45 min</p>
-    </div>
-
-    <div class="rec-card">
-        <span class="rec-tag text-blue-dim">STRENGTHEN WEAK AREA</span>
-        <h4 class="rec-title">Backpropagation deep dive</h4>
-        <p class="rec-desc">You spent 2× average time on gradient descent · est. 1.2 hr</p>
-    </div>
-</aside>
-                <div class="left-col">
-                    <div class="activity-card">
+                    <div class="activity-card" style="margin-bottom: 2rem;">
                         <div class="card-header">
                             <h3>This week</h3>
                             <span class="streak-pill">5-day streak 🔥</span>
@@ -156,95 +96,109 @@
                     </div>
 
                     <div class="paths-section">
-                        <h3>Active paths</h3>
-                        <div class="path-item">
-                            <div class="path-info">
-                                <span>Full-stack engineering</span>
-                                <span class="path-percent">44%</span>
+                        <h3 class="section-title">Active paths</h3>
+                        
+                        <div class="path-card">
+                            <div class="path-header">
+                                <div class="path-name">
+                                    <h4>Full-stack engineering</h4>
+                                    <p>Module 4 of 9 · Node.js APIs</p>
+                                </div>
+                                <span class="path-percentage text-purple">44%</span>
                             </div>
-                            <div class="progress-bg"><div class="progress-bar purple" style="width: 44%"></div></div>
+                            <div class="progress-track">
+                                <div class="progress-fill bg-purple" style="width: 44%"></div>
+                            </div>
                         </div>
-                        <div class="path-item">
-                            <div class="path-info">
-                                <span>ML fundamentals</span>
-                                <span class="path-percent">72%</span>
+
+                        <div class="path-card">
+                            <div class="path-header">
+                                <div class="path-name">
+                                    <h4>ML fundamentals</h4>
+                                    <p>Module 6 of 8 · Deep learning</p>
+                                </div>
+                                <span class="path-percentage text-green">72%</span>
                             </div>
-                            <div class="progress-bg"><div class="progress-bar green" style="width: 72%"></div></div>
+                            <div class="progress-track">
+                                <div class="progress-fill bg-green" style="width: 72%"></div>
+                            </div>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-header">
+                                <div class="path-name">
+                                    <h4>System design</h4>
+                                    <p>Module 1 of 6 · Basics</p>
+                                </div>
+                                <span class="path-percentage text-yellow">18%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill bg-yellow" style="width: 18%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <aside class="right-col">
-                    <h3>AI recommendations</h3>
+                    <h3 class="section-title">AI recommendations</h3>
+                    
                     <div class="rec-card">
-    <span class="tag blue-tag">NEXT UP · BASED ON YOUR PACE</span>
-    <h4>REST API design patterns</h4>
-    <p>Follows naturally from your Express.js module</p>
-</div>
+                        <span class="tag blue-tag">NEXT UP · BASED ON YOUR PACE</span>
+                        <h4>REST API design patterns</h4>
+                        <p>Follows naturally from your Express.js module</p>
+                    </div>
 
-<div class="rec-card">
-    <span class="tag purple-tag">STRENGTHEN WEAK AREA</span>
-    <h4>Backpropagation deep dive</h4>
-    <p>You spent 2x average time on gradient descent</p>
-</div>
+                    <div class="rec-card">
+                        <span class="tag purple-tag">STRENGTHEN WEAK AREA</span>
+                        <h4>Backpropagation deep dive</h4>
+                        <p>You spent 2x average time on gradient descent</p>
+                    </div>
                 </aside>
             </div>
         </main>
     </div>
 
-    <script>lucide.createIcons();</script>
     <script>
-    // 1. Initialize Lucide Icons
-    lucide.createIcons();
+        // 1. Initialize Icons
+        lucide.createIcons();
 
-    // 2. Search Logic
-    const searchInput = document.getElementById('pathSearch');
-    const pathCards = document.querySelectorAll('.path-card');
-
-    searchInput.addEventListener('input', (e) => {
-        const value = e.target.value.toLowerCase();
+        // 2. Profile Logic: Sync Name from Login
+        const savedName = localStorage.getItem('userDisplayName') || "Arjun Mehra";
         
-        pathCards.forEach(card => {
-            const title = card.querySelector('h4').textContent.toLowerCase();
-            // If the title includes the search text, show it; otherwise, hide it
-            if (title.includes(value)) {
-                card.style.display = "block";
-                card.style.opacity = "1";
-            } else {
-                card.style.display = "none";
-            }
+        // Update top-nav name and hero welcome message
+        const nameElements = document.querySelectorAll('.user-name, #welcome-name');
+        nameElements.forEach(el => el.innerText = savedName);
+
+        // Update Avatar Initials
+        const avatarElement = document.querySelector('.avatar');
+        if(avatarElement) {
+            const initials = savedName.split(' ').map(n => n[0]).join('').toUpperCase();
+            avatarElement.innerText = initials.substring(0, 2); 
+        }
+
+        // 3. Search Logic
+        const searchInput = document.getElementById('pathSearch');
+        const pathCards = document.querySelectorAll('.path-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const value = e.target.value.toLowerCase();
+            pathCards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                if (title.includes(value)) {
+                    card.style.display = "block";
+                    card.style.opacity = "1";
+                } else {
+                    card.style.display = "none";
+                }
+            });
         });
-    });
 
-    // 3. Simple Hover Effect for Stats
-    const stats = document.querySelectorAll('.stat-card');
-    stats.forEach(stat => {
-        stat.addEventListener('mouseenter', () => {
-            stat.style.borderColor = '#8b5cf6';
+        // 4. Hover Effects for Stat Cards
+        const stats = document.querySelectorAll('.stat-card');
+        stats.forEach(stat => {
+            stat.addEventListener('mouseenter', () => stat.style.borderColor = '#8b5cf6');
+            stat.addEventListener('mouseleave', () => stat.style.borderColor = 'rgba(255, 255, 255, 0.05)');
         });
-        stat.addEventListener('mouseleave', () => {
-            stat.style.borderColor = '#24242e';
-        });
-    });
-</script>
-<script>
-    lucide.createIcons();
-
-    // UPDATE PROFILE ICON AND NAME
-    const savedName = localStorage.getItem('userDisplayName') || "Guest User";
-    
-    // 1. Update the Text Name
-    const nameElement = document.querySelector('.user-name');
-    if(nameElement) nameElement.innerText = savedName;
-
-    // 2. Update the Avatar Initials (e.g., "Arjun Mehra" -> "AM")
-    const avatarElement = document.querySelector('.avatar');
-    if(avatarElement) {
-        const initials = savedName.split(' ').map(n => n[0]).join('').toUpperCase();
-        avatarElement.innerText = initials.substring(0, 2); 
-    }
-
-    // Your existing Search Logic...
-</script>
+    </script>
 </body>
 </html>
