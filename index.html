@@ -186,5 +186,39 @@
     </div>
 
     <script>lucide.createIcons();</script>
+    <script>
+    // 1. Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 2. Search Logic
+    const searchInput = document.getElementById('pathSearch');
+    const pathCards = document.querySelectorAll('.path-card');
+
+    searchInput.addEventListener('input', (e) => {
+        const value = e.target.value.toLowerCase();
+        
+        pathCards.forEach(card => {
+            const title = card.querySelector('h4').textContent.toLowerCase();
+            // If the title includes the search text, show it; otherwise, hide it
+            if (title.includes(value)) {
+                card.style.display = "block";
+                card.style.opacity = "1";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+
+    // 3. Simple Hover Effect for Stats
+    const stats = document.querySelectorAll('.stat-card');
+    stats.forEach(stat => {
+        stat.addEventListener('mouseenter', () => {
+            stat.style.borderColor = '#8b5cf6';
+        });
+        stat.addEventListener('mouseleave', () => {
+            stat.style.borderColor = '#24242e';
+        });
+    });
+</script>
 </body>
 </html>

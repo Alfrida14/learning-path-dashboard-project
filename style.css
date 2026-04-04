@@ -166,3 +166,7 @@ body {
 
 .text-purple-dim { color: #a78bfa; }
 .text-blue-dim { color: #60a5fa; }
+
+.path-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
