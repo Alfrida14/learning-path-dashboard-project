@@ -170,3 +170,35 @@ body {
 .path-card {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+/* Search Bar Styling */
+.header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #1c1c26;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0 12px;
+    margin: 0 20px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-icon {
+    width: 16px;
+    color: var(--text-dim);
+}
+
+#pathSearch {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.85rem;
+    outline: none;
+    width: 100%;
+}
+
+#pathSearch::placeholder {
+    color: var(--text-dim);
+}
