@@ -202,3 +202,78 @@ body {
 #pathSearch::placeholder {
     color: var(--text-dim);
 }
+
+/* 1. Dashboard Layout Tweak */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr; /* Matches the screenshot's proportions */
+    gap: 2.5rem;
+    padding: 0 2rem 3rem;
+}
+
+/* 2. Glassmorphism for Cards */
+.stat-card, .rec-card, .activity-card {
+    background: linear-gradient(145deg, #16161e 0%, #111118 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover, .rec-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+    background: linear-gradient(145deg, #1c1c26 0%, #16161e 100%);
+}
+
+/* 3. Streak Pill Styling */
+.streak-pill {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* 4. Recommendation Tag Colors */
+.tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.purple-tag { color: #a78bfa; }
+.blue-tag { color: #60a5fa; }
+
+/* 5. Custom Scrollbar for the Sidebar (The "Engineer" look) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #24242e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b3b4f;
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
